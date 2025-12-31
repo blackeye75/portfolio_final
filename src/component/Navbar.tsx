@@ -1,0 +1,65 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { useState } from "react";
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <motion.nav
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/10"
+    >
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        
+        {/* Logo */}
+        <Link href="/" className="text-white font-semibold text-lg">
+          Priyanshu<span className="text-gray-400">.</span>
+        </Link>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex gap-8 text-sm text-gray-300">
+          <Link href="#about" className="hover:text-white transition">
+            About
+          </Link>
+          <Link href="#projects" className="hover:text-white transition">
+            Projects
+          </Link>
+          <Link href="#skills" className="hover:text-white transition">
+            Skills
+          </Link>
+          <Link href="#contact" className="hover:text-white transition">
+            Contact
+          </Link>
+        </div>
+
+        {/* Mobile button */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-white text-xl"
+        >
+          ☰
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {open && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="md:hidden bg-black/90 border-t border-white/10 px-6 py-6 space-y-4"
+        >
+          <a href="#about" className="block text-gray-300">About</a>
+          <a href="#projects" className="block text-gray-300">Projects</a>
+          <a href="#skills" className="block text-gray-300">Skills</a>
+          <a href="#contact" className="block text-gray-300">Contact</a>
+        </motion.div>
+      )}
+    </motion.nav>
+  );
+}
