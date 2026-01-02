@@ -10,7 +10,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-black text-white">
         <Navbar />
-        <h1 className="text-center text-red-800" >Hello world</h1>
+        {/* <h1 className="text-center text-red-800" >Hello world</h1> */}
         {children}
       </body>
     </html>
