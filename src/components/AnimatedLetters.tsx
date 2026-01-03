@@ -19,20 +19,27 @@ export default function AnimatedLetters({ text, className }: Props) {
         hidden: {},
         visible: {
           transition: {
-            staggerChildren: 0.03,
+            staggerChildren: 0.04, // smooth stagger
           },
         },
       }}
+      // variants={{
+      //   hidden: { opacity: 0, filter: "blur(4px)" },
+      //   visible: { opacity: 1, filter: "blur(0px)" },
+      // }}
       className={`inline-block ${className}`}
     >
       {letters.map((char, i) => (
         <motion.span
           key={i}
           variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0 },
+            visible: { opacity: 1 },
           }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          transition={{
+            duration: 0.35,
+            ease: "easeOut",
+          }}
           className="inline-block"
         >
           {char === " " ? "\u00A0" : char}

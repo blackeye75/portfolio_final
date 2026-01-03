@@ -1,3 +1,48 @@
+// "use client";
+
+// import { motion } from "framer-motion";
+
+// type Props = {
+//   text: string;
+//   className?: string;
+// };
+
+// export default function AnimatedWords({ text, className }: Props) {
+//   const words = text.split(" ");
+
+//   return (
+//     <motion.div
+//       initial="hidden"
+//       whileInView="visible"
+//       viewport={{ once: true, margin: "-100px" }}
+//       variants={{
+//         hidden: {},
+//         visible: {
+//           transition: {
+//             staggerChildren: 0.08,
+//           },
+//         },
+//       }}
+//       className={className}
+//     >
+//       {words.map((word, i) => (
+//         <motion.span
+//           key={i}
+//           variants={{
+//             hidden: { opacity: 0, y: 24 },
+//             visible: { opacity: 1, y: 0 },
+//           }}
+//           transition={{ duration: 0.5, ease: "easeOut" }}
+//           className="inline-block mr-2"
+//         >
+//           {word}
+//         </motion.span>
+//       ))}
+//     </motion.div>
+//   );
+// }
+
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -11,10 +56,10 @@ export default function AnimatedWords({ text, className }: Props) {
   const words = text.split(" ");
 
   return (
-    <motion.div
+    <motion.span
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "-80px" }}
       variants={{
         hidden: {},
         visible: {
@@ -23,21 +68,21 @@ export default function AnimatedWords({ text, className }: Props) {
           },
         },
       }}
-      className={className}
+      className={`inline-block ${className}`}
     >
       {words.map((word, i) => (
         <motion.span
           key={i}
           variants={{
-            hidden: { opacity: 0, y: 24 },
-            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0 },
+            visible: { opacity: 1 },
           }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="inline-block mr-2"
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="inline-block mr-1"
         >
           {word}
         </motion.span>
       ))}
-    </motion.div>
+    </motion.span>
   );
 }

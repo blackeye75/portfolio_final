@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -15,10 +16,18 @@ export default function Navbar() {
       className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/10"
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        
+
         {/* Logo */}
-        <Link href="/" className="text-white font-semibold text-lg">
-          Priyanshu<span className="text-gray-400">.</span>
+        <Link href="/" className="flex items-center gap-2 rounded-full overflow-hidden">
+          <Image
+            src="/blackeyelogo.png"
+            alt="Priyanshu logo"
+            width={26}
+            height={26}
+          />
+          <span className="text-white font-semibold text-sm tracking-wide">
+            Priyanshu
+          </span>
         </Link>
 
         {/* Desktop Menu */}
