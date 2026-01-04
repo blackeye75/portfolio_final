@@ -163,12 +163,12 @@ export default function Hero() {
 
       {/* MAIN HERO CONTENT */}
       <div className="
-        max-w-7xl mx-auto
+        max-w-screen mx-28
         px-6 md:px-12
-        min-h-[85svh]
+        min-h-[75svh]
         flex items-center
       ">
-        <div className="grid md:grid-cols-2 gap-16 w-full items-center">
+        <div className="grid md:grid-cols-2 gap-[3vw] w-full items-center">
 
           {/* TEXT SIDE */}
           <div className="pt-10">
@@ -216,43 +216,60 @@ export default function Hero() {
       </div>
 
       {/* BOTTOM INFO STRIP */}
-      <div className="absolute left-0 right-0 bottom-10">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
+      <div className="flex justify-between md:justify-start absolute left-0 right-0 bottom-12">
+        <div className="max-w-7xl mx-[21vw] px-6 md:px-12">
 
-            {/* LEFT LABEL */}
-            <div className="text-xs text-gray-400 uppercase tracking-[0.25em] pt-1">
-              <AnimatedLetters text="Position" className="text-3xl" />
+          <div
+            className="
+        grid
+        grid-cols-1
+        md:grid-cols-[22%_1px_70%]
+        gap-28
+        
+        items-start
+      "
+          >
+            {/* LEFT (POSITION) */}
+            <div className="pt-[5px] sm:-ml-52">
+              <div className="text-xs text-gray-400 uppercase tracking-[0.25em] leading-none">
+                <AnimatedLetters text="Position" className="text-3xl" />
+              </div>
+            </div>
+
+            {/* VERTICAL DIVIDER */}
+            <div className="hidden md:flex  justify-center pt-[1px]">
+              <AnimatedVerticalDivider />
             </div>
 
             {/* RIGHT CONTENT */}
-            <div>
+            <div className="pt-[7px]">
               <p className="text-gray-300 max-w-xl leading-relaxed">
                 <AnimatedWords text="Providing direct, discreet support to build high quality digital products that create long lasting impact." />
               </p>
 
-              <div className="mt-6">
+              <div className="mt-5">
                 <motion.button
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
                   className="
-                    px-5 py-2
-                    border border-white/30
-                    rounded-md
-                    text-sm
-                    hover:border-white
-                    transition
-                  "
+              px-5 py-2
+              border border-white/30
+              rounded-md
+              text-sm
+              hover:border-white
+              transition
+            "
                 >
                   View services
                 </motion.button>
               </div>
             </div>
-
           </div>
+
         </div>
       </div>
+
 
     </section>
   );

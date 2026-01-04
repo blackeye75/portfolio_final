@@ -10,11 +10,7 @@ export default function AnimatedVerticalDivider() {
       viewport={{ once: true }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       style={{ transformOrigin: "top" }}
-      className="
-        w-px
-        bg-white/30
-        h-full
-      "
+      className="w-px h-32 bg-red-500/30"
     />
   );
 }

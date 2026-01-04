@@ -18,7 +18,7 @@ export default function AnimatedDivider() {
         left-0 
         right-0 
         h-[0.1px] 
-        bg-white/30
+        bg-red-500/30
         shadow-[0_0_10px_rgba(255,255,255,0.3)]
         z-50
       "
