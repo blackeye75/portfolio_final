@@ -18,13 +18,31 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 rounded-full overflow-hidden">
-          <Image
-            src="/blackeyelogo.png"
-            alt="Priyanshu logo"
-            width={26}
-            height={26}
-          />
+        <Link href="/" className="flex items-center gap-2">
+          <motion.div
+            initial={{ rotate: -180, opacity: 0 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+            }}
+            whileHover={{
+              rotate: 360,
+              transition: {
+                duration: 0.6,
+                ease: "easeInOut",
+              },
+            }}
+            className="rounded-full overflow-hidden"
+          >
+            <Image
+              src="/blackeyelogo.png"
+              alt="Priyanshu logo"
+              width={26}
+              height={26}
+            />
+          </motion.div>
+
           <span className="text-white font-semibold text-sm tracking-wide">
             Priyanshu
           </span>

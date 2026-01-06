@@ -19,7 +19,7 @@ export default function AnimatedLetters({ text, className }: Props) {
         hidden: {},
         visible: {
           transition: {
-            staggerChildren: 0.04, // smooth stagger
+            staggerChildren: 0.15, // smooth stagger
           },
         },
       }}
@@ -40,7 +40,7 @@ export default function AnimatedLetters({ text, className }: Props) {
             duration: 0.35,
             ease: "easeOut",
           }}
-          className="inline-block"
+          className="inline-block uppercase"
         >
           {char === " " ? "\u00A0" : char}
         </motion.span>

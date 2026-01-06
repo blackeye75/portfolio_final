@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function AnimatedVerticalDivider() {
+export default function AnimatedVerticalDivider({className}: {className?: string}) {
   return (
     <motion.div
       initial={{ scaleY: 0, opacity: 0 }}
@@ -10,7 +10,7 @@ export default function AnimatedVerticalDivider() {
       viewport={{ once: true }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       style={{ transformOrigin: "top" }}
-      className="w-px h-32 bg-red-500/30"
+      className={`w-px h-32 bg-red-500/30 ${className}`}
     />
   );
 }
