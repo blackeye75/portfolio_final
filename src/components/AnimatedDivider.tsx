@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function AnimatedDivider(className?: string) {
+export default function AnimatedDivider({ className }: { className?: string }) {
   return (
     <motion.div
       initial={{ scaleX: 0, opacity: 0 }}
@@ -13,16 +13,16 @@ export default function AnimatedDivider(className?: string) {
         ease: "easeOut",
       }}
       style={{ transformOrigin: "left" }}
-      className="
-        `absolute 
-        left-0 
-        right-0 
-        h-[0.1px] 
+      className={`
+        absolute
+        left-0
+        right-0
+        h-[0.5px]
         bg-red-500/30
         shadow-[0_0_10px_rgba(255,255,255,0.3)]
-        z-50`
-        ${className}`
-      "
+        z-50
+        ${className}
+      `}
     />
   );
 }

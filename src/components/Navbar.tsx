@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -13,7 +14,7 @@ export default function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/10"
+      className="fixed top-0 left-0 w-full z-[100] backdrop-blur-md bg-black/40 border-b border-white/10"
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
@@ -50,7 +51,7 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 text-sm text-gray-300">
-          <Link href="#about" className="hover:text-white transition">
+          <Link href="/about" className="hover:text-white transition">
             About
           </Link>
           <Link href="#projects" className="hover:text-white transition">
@@ -81,10 +82,10 @@ export default function Navbar() {
           transition={{ duration: 0.3 }}
           className="md:hidden bg-black/90 border-t border-white/10 px-6 py-6 space-y-4"
         >
-          <a href="#about" className="block text-gray-300">About</a>
-          <a href="#projects" className="block text-gray-300">Projects</a>
-          <a href="#skills" className="block text-gray-300">Skills</a>
-          <a href="#contact" className="block text-gray-300">Contact</a>
+          <Link href="/about" className="block text-gray-300">About</Link>
+          <Link href="#projects" className="block text-gray-300">Projects</Link>
+          <Link href="#skills" className="block text-gray-300">Skills</Link>
+          <Link href="#contact" className="block text-gray-300">Contact</Link>
         </motion.div>
       )}
     </motion.nav>

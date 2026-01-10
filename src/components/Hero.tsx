@@ -56,7 +56,14 @@ export default function Hero() {
             {/* SUB HEADING */}
             <div className="space-y-1 max-w-md">
               <div className="text-gray-400 text-base leading-tight">
-                <AnimatedWords text="I design and develop clean scalable and high performance applications for the modern web." />
+                <AnimatedWords text="I design and develop clean scalable and high performance " />
+              </div>
+              <AnimatedLine
+                width="27vw"
+                className="bg-red-500/20 h-[0.5px]"
+              />
+              <div className="text-gray-400 text-base leading-tight">
+                <AnimatedWords text=" applications for the modern web." />
               </div>
 
               <AnimatedLine
@@ -93,11 +100,11 @@ export default function Hero() {
       </div>
 
       {/* DIVIDER (aligned to grid, not viewport) */}
-      {/* <div className="absolute left-0 right-0 top-[75svh]">
+      <div className="absolute left-0 right-0 top-[75svh]">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <AnimatedDivider />
         </div>
-      </div> */}
+      </div>
 
       {/* BOTTOM INFO STRIP */}
       <div className="flex justify-between md:justify-start absolute left-0 right-0 bottom-12">
