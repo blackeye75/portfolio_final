@@ -5,6 +5,7 @@ import Image from "next/image";
 import AnimatedWords from "./AnimatedWords";
 import AnimatedLetters from "./AnimatedLetters";
 import AnimatedLine from "./AnimatedLine";
+import RevealButton from "./RevealButton";
 
 export default function MissionSection() {
   return (
@@ -15,7 +16,7 @@ export default function MissionSection() {
 
         {/* LEFT: TEXT (30vw) */}
         <div className="w-[30vw] min-w-[320px] px-10 py-20 flex flex-col justify-between">
-          <div className="space-y-6">
+          <div className="space-y-1">
             <p className="text-sm text-gray-500">
               <AnimatedLetters text="Our Mission" />
             </p>
@@ -24,17 +25,27 @@ export default function MissionSection() {
               <AnimatedLetters className="tracking-tighter text-xl" text="Bridging ideas to reality." />
               <AnimatedLine
                 width="clamp(120px, 18vw, 260px)"
-                className="bg-red-500/50 h-[2px] -mt-1 "
-              />  
-              <br />
-              <AnimatedLetters className="tracking-tighter text-xl" text="From sketch to investor pitch." />
-              <br />
-              <AnimatedLetters className="tracking-tighter text-xl" text="From the chaos of doing to delivering a vision." />
+                className="bg-red-500/50 h-[2px] mt-0.5 "
+              />
+              <div className="-mt-10">
+
+                <br />
+                <AnimatedLetters className="tracking-tighter text-xl" text="From sketch to investor pitch." />
+                <br />
+                <AnimatedLetters className="tracking-tighter text-xl" text="From the chaos of doing to delivering a vision." />
+              </div>
             </h2>
 
-            <button className="mt-4 inline-flex w-fit px-4 py-2 border border-black/20 text-sm hover:border-black transition">
+            {/* <motion.button
+              initial={{ scaleX: 1 }}
+              whileInView={{ scaleX: 1.05 }}
+              transition={{ type: "spring", stiffness: 120, damping: 20 }}
+              style={{ transformOrigin: "left" }}
+              className="mt-4 px-4 py-2 border border-black/20 text-sm"
+            >
               Read more
-            </button>
+            </motion.button> */}
+            <RevealButton />
           </div>
         </div>
 
@@ -49,14 +60,14 @@ export default function MissionSection() {
             src="/missionsec.png" // replace with your image
             alt="Mission visual"
             fill
-            className="object-cover"
+            className="object-cover "
             priority
           />
         </motion.div>
       </div>
 
       {/* BOTTOM: 30vh (placeholder info) */}
-      <div className="h-[30vh] px-16 flex items-center">
+      <div className="h-[30vh] px-16 flex items-center justify-around">
         <div className="grid grid-cols-4 gap-12 w-full text-sm">
           <div>
             <p className="text-3xl font-medium">14</p>

@@ -36,7 +36,7 @@ export default function AboutPage() {
       <DarkVeil />
       <main className="w-full min-h-screen bg-[url('/workbg.jpg')] z-[1] absolute bg-cover top-0">
         <AboutHero />
-        <AboutContent />
+        {/* <AboutContent /> */}
         <Philosophy />
         <TechStack />
       </main>
