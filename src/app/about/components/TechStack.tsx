@@ -27,7 +27,7 @@ export default function TechStack() {
         <SkillCard title="MySql" subtitle="DB" icon="/mysql.png" classname="bg-white"  />
         <SkillCard title="Node" subtitle="Framework" icon="/Nodejs.png" classname="bg-white"  />
         <SkillCard title="postman" subtitle="API Testing" icon="/postman.png" classname="bg-white"  />
-        <SkillCard title="Next.js" subtitle="Framework" icon="/next.js.png" classname="bg-white"  />
+        <SkillCard title="vs" subtitle="Code Editor" icon="/vs.png" classname="bg-white"  />
         <SkillCard title="Next.js" subtitle="Framework" icon="/next.js.png" classname="bg-white"  />
         <SkillCard title="Next.js" subtitle="Framework" icon="/next.js.png" classname="bg-white"  />
       </div>
