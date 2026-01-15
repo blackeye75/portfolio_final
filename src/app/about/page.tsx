@@ -29,6 +29,7 @@ import AboutContent from "./components/AboutContent";
 import Philosophy from "./components/Philosophy";
 import TechStack from "./components/TechStack";
 import DarkVeil from "@/components/DarkVeil";
+import CircularText from "@/components/CircularText";
 
 export default function AboutPage() {
   return (
@@ -39,6 +40,12 @@ export default function AboutPage() {
         {/* <AboutContent /> */}
         <Philosophy />
         <TechStack />
+        <CircularText
+          text="REACT*BITS*COMPONENTS*"
+          onHover="speedUp"
+          spinDuration={20}
+          className="custom-class"
+        />
       </main>
     </div>
   );

@@ -28,6 +28,18 @@ const philosophyData = [
 export default function Philosophy() {
   return (
     <section className="px-[10vw] md:px-[17.5vw] sm:pt-4 space-y-10">
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        Name&apos;s <span className="text-blue-500">Priyanshu Raj</span>, a
+        passionate <span className="text-pink-500">Full-Stack Web Developer</span>{" "}
+        currently based in Bangalore. I have 1.7+ years of experience building
+        scalable, high-performance web applications. I strongly believe that the
+        most impactful things are often invisible — and great products tell
+        powerful stories.
+      </motion.p>
       {philosophyData.map((item) => (
         <div key={item.title}>
           <motion.h2

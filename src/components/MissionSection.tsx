@@ -24,10 +24,10 @@ export default function MissionSection() {
             <h2 className="text-3xl leading-normal font-normal max-w-sm">
               <AnimatedLetters className="tracking-tighter text-xl" text="Bridging ideas to reality." />
               <AnimatedLine
-                width="clamp(120px, 18vw, 260px)"
-                className="bg-red-500/50 h-[2px] mt-0.5 "
+                width="clamp(120px, 16vw, 260px)"
+                className="bg-red-500/50 h-[2px] -mt-1 "
               />
-              <div className="-mt-10">
+              <div className="-mt-6">
 
                 <br />
                 <AnimatedLetters className="tracking-tighter text-xl" text="From sketch to investor pitch." />
@@ -51,39 +51,40 @@ export default function MissionSection() {
 
         {/* RIGHT: IMAGE (70vw, animated) */}
         <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "65vw" }}
+          initial={{ width: 0, opacity: 0 }}
+          whileInView={{ width: "65vw", opacity: 1 }}
+          viewport={{ once: false, amount: 0.4 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
           className="relative h-full overflow-hidden mt-10 rounded-3xl"
         >
           <Image
-            src="/missionsec.png" // replace with your image
+            src="/missionsec.jpg"
             alt="Mission visual"
             fill
-            className="object-cover "
-            priority
+            className="object-cover"
           />
         </motion.div>
+
       </div>
 
       {/* BOTTOM: 30vh (placeholder info) */}
-      <div className="h-[30vh] px-16 flex items-center justify-around">
+      <div className="h-[30vh] px-1 flex items-center justify-around">
         <div className="grid grid-cols-4 gap-12 w-full text-sm">
           <div>
-            <p className="text-3xl font-medium">14</p>
-            <p className="text-gray-500">Office locations</p>
+            <p className="text-3xl font-medium text-center">2.5+</p>
+            <p className="text-gray-500 text-center">Year of Exp</p>
           </div>
           <div>
-            <p className="text-3xl font-medium">89</p>
-            <p className="text-gray-500">Awards won</p>
+            <p className="text-3xl font-medium text-center">30+</p>
+            <p className="text-gray-500 text-center">UI UX Design</p>
           </div>
           <div>
-            <p className="text-3xl font-medium">450+</p>
-            <p className="text-gray-500">Projects delivered</p>
+            <p className="text-3xl font-medium text-center">--</p>
+            <p className="text-gray-500 text-center">Projects delivered</p>
           </div>
           <div>
-            <p className="text-3xl font-medium">22k</p>
-            <p className="text-gray-500">Hours donated</p>
+            <p className="text-3xl font-medium text-center">8.5k</p>
+            <p className="text-gray-500 text-center">Hours donated</p>
           </div>
         </div>
       </div>
