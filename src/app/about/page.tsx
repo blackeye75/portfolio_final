@@ -30,22 +30,18 @@ import Philosophy from "./components/Philosophy";
 import TechStack from "./components/TechStack";
 import DarkVeil from "@/components/DarkVeil";
 import CircularText from "@/components/CircularText";
+import CircleCollection from "./components/CircleCollection";
 
 export default function AboutPage() {
   return (
-    <div style={{ width: '100%', height: '600px', position: 'relative', top: 10, left: 0 }}>
+    <div style={{ width: '100%', height: '600px', position: 'relative', top: 40, left: 0 }}>
       <DarkVeil />
-      <main className="w-full min-h-screen bg-[url('/workbg.jpg')] z-[1] absolute bg-cover top-0">
+      <main className="w-full min-h-screen  z-[1] absolute bg-cover sm:top-0 top-10">
         <AboutHero />
         {/* <AboutContent /> */}
         <Philosophy />
         <TechStack />
-        <CircularText
-          text="REACT*BITS*COMPONENTS*"
-          onHover="speedUp"
-          spinDuration={20}
-          className="custom-class"
-        />
+        <CircleCollection />
       </main>
     </div>
   );

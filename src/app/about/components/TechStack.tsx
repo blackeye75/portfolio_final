@@ -32,7 +32,7 @@ export default function TechStack() {
         <SkillCard title="Next.js" subtitle="Framework" icon="/next.js.png" classname="bg-white"  />
       </div>
 
-      <div className="mt-10 h-screen">
+      <div className="mt-10 sm:h-screen h-fit">
         <Poster />
       </div>
     </section>
